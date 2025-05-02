@@ -1,12 +1,12 @@
-const mongoose =require('mongoose');
-async function dbConn(){
-    const conn=await mongoose.connect('mongodb://localhost:27017/studentapp');
-    if(conn){
+const mongoose = require('mongoose');
+async function dbConn() {
+    const conn = await mongoose.connect('mongodb+srv://kush:root@cluster0.fxeswa2.mongodb.net/crud?retryWrites=true&w=majority&appName=Cluster0');
+    if (conn) {
         console.log('database connect successfully')
 
     }
-    else{
+    else {
         console.log('connection fail');
     }
 }
-module.exports=dbConn;
+module.exports = dbConn;
